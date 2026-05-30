@@ -1,65 +1,156 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useCallback } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Terminal from "@/components/Terminal";
+import MetricsCounter from "@/components/MetricsCounter";
+import { PERSONAL } from "@/lib/constants";
+import {
+  CodeBlock,
+  CodeLine,
+  LineNumber,
+  Keyword,
+  Str,
+  Fn,
+  Comment,
+  Bracket,
+  Type,
+  Prop,
+  Num,
+} from "@/components/CodeLine";
 
 export default function Home() {
+  const [booted, setBooted] = useState(false);
+  const onComplete = useCallback(() => setBooted(true), []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <AnimatePresence>
+        {!booted && <Terminal onComplete={onComplete} />}
+      </AnimatePresence>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.6 }}
+        className="relative z-10"
+      >
+        <CodeBlock>
+          <CodeLine>
+            <LineNumber n={1} />
+            <Comment>index.tsx -- Portfolio Entry Point</Comment>
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={2} />
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={3} />
+            <Keyword>import</Keyword> <Bracket>{"{"}</Bracket>{" "}
+            <Type>Developer</Type> <Bracket>{"}"}</Bracket>{" "}
+            <Keyword>from</Keyword> <Str>@/ramendra</Str>;
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={4} />
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={5} />
+            <Keyword>const</Keyword> <Fn>ramendra</Fn>
+            <Bracket>:</Bracket> <Type>Developer</Type> ={" "}
+            <Bracket>{"{"}</Bracket>
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={6} />
+            {"  "}
+            <Prop>name</Prop>: <Str>{PERSONAL.name}</Str>,
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={7} />
+            {"  "}
+            <Prop>role</Prop>: <Str>{PERSONAL.role}</Str>,
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={8} />
+            {"  "}
+            <Prop>location</Prop>: <Str>{PERSONAL.location}</Str>,
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={9} />
+            {"  "}
+            <Prop>stack</Prop>: [<Str>React</Str>, <Str>Next.js</Str>,{" "}
+            <Str>TypeScript</Str>],
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={10} />
+            {"  "}
+            <Prop>yearsOfExp</Prop>: <Num>2</Num>,
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={11} />
+            {"  "}
+            <Prop>productionRollbacks</Prop>: <Num>0</Num>,
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={12} />
+            <Bracket>{"}"}</Bracket>;
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={13} />
+          </CodeLine>
+          <CodeLine>
+            <LineNumber n={14} />
+            <Keyword>export default</Keyword> <Fn>ramendra</Fn>;
+          </CodeLine>
+        </CodeBlock>
+
+        {/* Metrics */}
+        <div className="mt-10">
+          <p className="text-[11px] text-text-muted mb-3 font-sans uppercase tracking-[0.15em]">
+            System Diagnostics
           </p>
+          <MetricsCounter />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        {/* Quick links */}
+        <div className="mt-10 flex flex-wrap gap-3">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/Ramendra_Kumar_Ravi-Resume.pdf"
+            download
+            className="btn-gradient px-5 py-2.5 rounded-lg text-[13px] font-sans"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            Download Resume
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={PERSONAL.github}
             target="_blank"
             rel="noopener noreferrer"
+            className="glass-card px-4 py-2.5 rounded-lg text-[13px] text-text-secondary hover:text-accent transition-colors font-sans"
           >
-            Documentation
+            GitHub
+          </a>
+          <a
+            href={PERSONAL.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-card px-4 py-2.5 rounded-lg text-[13px] text-text-secondary hover:text-accent transition-colors font-sans"
+          >
+            LinkedIn
+          </a>
+          <a
+            href={`mailto:${PERSONAL.email}`}
+            className="glass-card px-4 py-2.5 rounded-lg text-[13px] text-text-secondary hover:text-accent transition-colors font-sans"
+          >
+            {PERSONAL.email}
           </a>
         </div>
-      </main>
-    </div>
+
+        <p className="mt-8 text-[12px] text-text-muted">
+          Press{" "}
+          <kbd className="px-1.5 py-0.5 glass-card rounded text-[11px] text-text-secondary">
+            Ctrl+K
+          </kbd>{" "}
+          to open command palette
+        </p>
+      </motion.div>
+    </>
   );
 }
