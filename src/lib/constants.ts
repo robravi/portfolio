@@ -4,7 +4,7 @@ export const PERSONAL = {
   tagline: "React.js | Next.js | TypeScript | Monorepo | CI/CD",
   email: "ramendra.ravi@gmail.com",
   phone: "+91 70799 74130",
-  linkedin: "https://linkedin.com/in/robravi",
+  linkedin: "https://www.linkedin.com/in/ramendra-kumar-ravi/",
   github: "https://github.com/robravi",
   location: "Bengaluru, KA",
 };
@@ -89,7 +89,13 @@ export const PROJECTS = [
     name: "AI Resume Analyzer",
     url: "https://ai-analyzer-neon-omega.vercel.app",
     github: "https://github.com/robravi",
-    stack: ["Next.js (SSR)", "Zustand", "TanStack Query", "Groq AI", "Llama 3.3 70B"],
+    stack: [
+      "Next.js (SSR)",
+      "Zustand",
+      "TanStack Query",
+      "Groq AI",
+      "Llama 3.3 70B",
+    ],
     description:
       "Full-stack AI-powered resume analysis platform that helps job seekers optimize their resumes using the Llama 3.3 70B model via Groq's low-latency inference engine.",
     features: [
