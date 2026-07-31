@@ -86,6 +86,35 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
   {
+    name: "Chronos 3D Watch Configurator",
+    url: "https://chronos-3d.vercel.app",
+    github: "https://github.com/robravi/chronos-3d",
+    stack: [
+      "Next.js 16",
+      "React Three Fiber",
+      "TypeScript",
+      "Zustand",
+      "TanStack Query",
+      ".NET 10 API",
+      "Azure",
+    ],
+    description:
+      "Real-time 3D luxury watch configurator: a collection page of eight curated editions flowing into a cinematic 3D atelier. Every part of the watch is procedurally generated -- zero downloaded 3D assets -- and pricing is verified server-side by an ASP.NET Core API on Azure.",
+    features: [
+      "Fully procedural 3D: lathe-profile case, 96-facet fluted bezel, sunburst dial driven by a generated anisotropy map, Roman numerals assembled from metal bars -- total 3D asset weight 0 KB",
+      "Server-authoritative pricing: instant optimistic totals on the client, re-validated by /api/quote at cart time; tampered or incompatible configs rejected with 400, covered by xUnit tests",
+      "The URL is the configuration -- every design is a shareable deep link; state hydrates from the query string and mirrors back via debounced replaceState",
+      "Celestial zodiac complication: the dial becomes a night sky tinted by the chosen dial color, with the sign's constellation glowing in its traditional power color",
+      "Cinematic per-part camera focus with critically-damped springs, ~220 ms material transitions, postprocessing gated by PerformanceMonitor with adaptive DPR",
+      "CI/CD: GitHub Actions tests and deploys the API to Azure App Service; Vercel builds and deploys the web app",
+    ],
+    metrics: [
+      { label: "3D Asset Weight", value: "0 KB" },
+      { label: "Configurations", value: "6,552" },
+      { label: "Curated Editions", value: "8" },
+    ],
+  },
+  {
     name: "AI Resume Analyzer",
     url: "https://ai-analyzer-neon-omega.vercel.app",
     github: "https://github.com/robravi",
