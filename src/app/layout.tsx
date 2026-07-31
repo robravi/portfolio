@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ramendra Kumar Ravi | Frontend Engineer",
+  title: "Ramendra Kumar Ravi | Full Stack Developer",
   description:
-    "Portfolio of Ramendra Kumar Ravi - Frontend Engineer specializing in React.js, Next.js, TypeScript, and Monorepo architecture.",
+    "Portfolio of Ramendra Kumar Ravi - Full Stack Developer specializing in React.js, Next.js, TypeScript, and C#/.NET services.",
 };
 
 export default function RootLayout({

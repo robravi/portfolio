@@ -100,11 +100,11 @@ export default function AboutPage() {
           transition={{ delay: 0.3 }}
         >
           <p>
-            Frontend Engineer with 2+ years shipping performance-critical
-            React.js applications in B2B SaaS environments. I architect
-            Monorepo systems using Nx and Turborepo, own CI/CD pipelines
-            end-to-end, and deliver measurable gains in load speed, API
-            response, and code reuse.
+            Full Stack Developer with 2+ years shipping performance-critical
+            React.js applications and C#/.NET services in B2B SaaS
+            environments. I architect Monorepo systems using Nx and Turborepo,
+            own CI/CD pipelines end-to-end, and deliver measurable gains in
+            load speed, API response, and code reuse.
           </p>
           <p>
             I was promoted from intern to full-time within 6 months --

@@ -1,6 +1,6 @@
 export const PERSONAL = {
   name: "Ramendra Kumar Ravi",
-  role: "Frontend Engineer",
+  role: "Full Stack Developer",
   tagline: "React.js | Next.js | TypeScript | Monorepo | CI/CD",
   email: "ramendra.ravi@gmail.com",
   phone: "+91 70799 74130",
@@ -59,7 +59,7 @@ export const SKILLS = {
 export const EXPERIENCE = [
   {
     hash: "a3f7b2d",
-    role: "React Frontend Developer",
+    role: "Full Stack Developer",
     company: "GAINSERV Infotech Pvt. Ltd.",
     period: "Sep 2024 - Present",
     context: "B2B SaaS | Team of 8 | Promoted from Intern | Bengaluru / Surat",
