@@ -39,9 +39,9 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
     eyebrow: "Case study 01 · Personal project · 2026",
     headline: ["Chronos", "3D"],
     intro:
-      "A luxury-watch configurator where every model is generated procedurally in the browser and priced live by a .NET API. Built to prove I can own a product end to end: rendering, API, infra, QA.",
+      "A watch configurator where every model is generated procedurally in the browser and priced by a server-authoritative .NET API. Built to prove I can own a product end to end: rendering, API, infra, QA.",
     facts: [
-      { label: "Role", value: "Solo: design, frontend, API, infra" },
+      { label: "Role", value: "Personal project, built end to end" },
       { label: "Frontend", value: "Next.js 16, React Three Fiber v9" },
       { label: "Backend", value: "ASP.NET Core, .NET 10" },
       { label: "Infra", value: "Vercel + Azure, GitHub Actions" },
@@ -68,9 +68,9 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
       },
       {
         title: "Visual QA as a script, not a checklist",
-        body: "Headless Chrome drives the live app, captures each edition from fixed angles and runs the interaction flows. The same harness renders the collection stills, so marketing images never drift from the product.",
+        body: "Headless Chrome drives the live app, captures each edition from fixed camera angles and runs the interaction flows. The same harness renders the collection stills, so marketing images never drift from the product.",
         tradeoff:
-          "Screenshots are not unit tests. They caught the bugs that mattered here: material and lighting regressions.",
+          "Screenshots are not unit tests. The pricing rules have xUnit coverage; the renders catch what tests can't, like material and lighting regressions.",
       },
     ],
     architecture: [
@@ -98,7 +98,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
       {
         label: "QA",
         title: "Puppeteer harness",
-        body: "Edition stills, interaction flows and visual regression from one script set",
+        body: "Edition stills and interaction flows from one script set; pricing validation covered by xUnit",
       },
       {
         label: "Data",
