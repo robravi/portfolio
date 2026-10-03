@@ -39,7 +39,7 @@ export const EXPERIENCE = [
     company: "GAINSERV Infotech Pvt. Ltd.",
     period: "Sep 2024 — Present",
     start: "2024-09",
-    context: "Multi-tenant B2B SaaS · promoted from intern",
+    context: "Multi-tenant B2B SaaS · Surat, India",
     location: "Surat, India",
     stack: [
       "Next.js",
@@ -172,7 +172,7 @@ export const PROJECTS: Project[] = [
 
 export const ABOUT = {
   paragraphs: [
-    "I'm Ramendra, a full stack developer at GAINSERV Infotech. I joined as an intern in 2024, was converted to full time in six months, and now own feature modules across a multi-tenant SaaS dashboard: billing, SSO, integrations, team and role management, and the AI configuration module.",
+    "I'm Ramendra, a full stack developer at GAINSERV Infotech. I own feature modules across a multi-tenant SaaS dashboard: billing, SSO, integrations, team and role management, and the AI configuration module. Next.js and React on the front, C#/.NET and PostgreSQL behind it.",
     "I like owning a feature from component architecture and state management through API design and deployment. The work I'm proudest of is unglamorous: a shared component library that replaced duplicated UI across apps, auth that isolates tenants properly, and a 3D configurator that ships no 3D assets.",
     "I ship daily with agentic AI tooling inside a normal review-and-test workflow. Looking next for a product team where frontend quality is a feature, not an afterthought.",
   ],
