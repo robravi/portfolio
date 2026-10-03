@@ -48,7 +48,7 @@ export const CASE_STUDIES: Record<string, CaseStudy> = {
       { label: "Status", value: "Live, verified end to end", accent: true },
     ],
     captureAlt:
-      "Looping capture: rotating a watch in the atelier, swapping case metal, price updating",
+      "Chronos atelier: Calibre One in polished steel with a fluted bezel and sunburst blue dial, configurator panel on the right showing a $7,200 total",
     problem: [
       "Product configurators normally ship megabytes of GLB models and textures per variant. For a watch with eight editions and thousands of option combinations that means either a huge download or a server rendering farm. Neither is acceptable on a free hosting tier.",
       "The constraint I set myself: zero static 3D assets, a real pricing backend, and the whole thing deployed on free tiers with a proper CI pipeline.",

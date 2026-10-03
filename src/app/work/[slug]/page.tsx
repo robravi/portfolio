@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PROJECTS } from "@/lib/constants";
 import { CASE_STUDIES } from "@/lib/case-studies";
@@ -83,12 +84,15 @@ export default async function WorkPage({ params }: { params: Promise<Params> }) 
       </header>
 
       {/* Capture */}
-      <div
-        className="rule-b w-full aspect-[16/9] md:aspect-[21/9] bg-panel flex items-center justify-center label text-[11px] md:text-xs text-dim text-center p-6"
-        role="img"
-        aria-label={study?.captureAlt ?? `${project.name} screenshot`}
-      >
-        {study?.captureAlt ?? `${project.name} screenshot`}
+      <div className="rule-b relative w-full aspect-[16/9] md:aspect-[21/9] bg-panel overflow-hidden">
+        <Image
+          src={project.image}
+          alt={study?.captureAlt ?? project.imageAlt}
+          fill
+          sizes="100vw"
+          className="object-cover object-top"
+          priority
+        />
       </div>
 
       {/* Facts strip */}

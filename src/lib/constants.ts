@@ -84,6 +84,9 @@ export type Project = {
   metrics: { label: string; value: string }[];
   year: string;
   kind: "Personal project";
+  /** Screenshot under /public/work, 1600x1000. */
+  image: string;
+  imageAlt: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -121,6 +124,9 @@ export const PROJECTS: Project[] = [
     ],
     year: "2026",
     kind: "Personal project",
+    image: "/work/chronos-3d.jpg",
+    imageAlt:
+      "Chronos atelier: a polished steel watch with a fluted bezel and sunburst blue dial beside the configurator panel",
   },
   {
     slug: "ai-resume-analyzer",
@@ -147,32 +153,9 @@ export const PROJECTS: Project[] = [
     ],
     year: "2025",
     kind: "Personal project",
-  },
-  {
-    slug: "e-commerce",
-    name: "E-Commerce App",
-    url: "https://e-commerceapi-taupe.vercel.app",
-    github: "https://github.com/robravi/e-Commerce",
-    stack: ["React", "Redux Toolkit", "Vite", "Vitest", "REST API", "CSS3"],
-    stackLine: "React · Redux Toolkit · Vite · Vitest",
-    summary:
-      "Catalog, cart and checkout with Redux Toolkit state and Vitest coverage. Fully responsive.",
-    description:
-      "A full-featured e-commerce storefront built with React and Redux Toolkit, consuming external product APIs with a focus on performance and accessibility.",
-    features: [
-      "Dynamic product filtering and search with real-time updates across categories, price ranges, and ratings.",
-      "Persistent cart management with add/remove/quantity controls, powered by Redux Toolkit for predictable state.",
-      "Complete checkout flow with form validation and order summary.",
-      "Code splitting and lazy loading reduced initial bundle size by 35%.",
-      "Fully responsive layout from mobile to desktop with WCAG-compliant accessible UI.",
-    ],
-    metrics: [
-      { label: "Bundle reduction", value: "35%" },
-      { label: "Commits", value: "80+" },
-      { label: "Responsive", value: "All devices" },
-    ],
-    year: "2025",
-    kind: "Personal project",
+    image: "/work/ai-resume-analyzer.jpg",
+    imageAlt:
+      "AI Resume Analyzer landing page: 'Your Resume, Perfected', powered by Llama 3.3 70B on Groq",
   },
 ];
 

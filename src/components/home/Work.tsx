@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -20,11 +21,15 @@ export default function Work() {
           >
             {/* Mobile-only thumbnail for the lead project */}
             {i === 0 && (
-              <div
-                className="md:hidden w-full aspect-[16/10] bg-panel border border-paper flex items-center justify-center label text-[11px] text-dim"
-                aria-hidden="true"
-              >
-                Atelier capture
+              <div className="md:hidden relative w-full aspect-[16/10] bg-panel border border-paper overflow-hidden">
+                <Image
+                  src={p.image}
+                  alt={p.imageAlt}
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
             )}
 
@@ -41,11 +46,14 @@ export default function Work() {
               <span className="label text-[11px] md:text-xs text-muted">{p.stackLine}</span>
             </div>
 
-            <div
-              className="hidden md:flex md:col-span-2 aspect-[4/3] bg-panel border border-paper items-center justify-center label text-[11px] text-dim text-center p-2"
-              aria-hidden="true"
-            >
-              Still
+            <div className="hidden md:block relative md:col-span-2 aspect-[4/3] bg-panel border border-paper overflow-hidden">
+              <Image
+                src={p.image}
+                alt={p.imageAlt}
+                fill
+                sizes="(min-width: 768px) 16vw, 0px"
+                className="object-cover object-top"
+              />
             </div>
           </Link>
         );
